@@ -5,12 +5,16 @@
 /* JOUW @FONT-FACE CODE HIER */
 @font-face {
   /* regular / 400 */
-
+  font-family:'Expletus Sans';
+  src:url('../fonts/ExpletusSans-Regular.ttf');
+  font-weight:400;
 }
 
 @font-face {
   /* bold / 700 */
-
+font-family:'Expletus Sans Bold';
+  src:url('../fonts/ExpletusSans-Bold.ttf');
+  font-weight:700;
 }
 
 
@@ -21,20 +25,20 @@ li:first-of-type {
 
 li:first-of-type h2 {
   /* JOUW CODE HIER */
-  
+  font-family: 'Expletus Sans', sans-serif;
 
 }
 
 li:first-of-type p {
   /* JOUW CODE HIER */
-  
+   font-family:'Expletus Sans';
 
 }
 
 /* hiermee selecteer je de eerste letter van de p in het eerste blokje */
 li:first-of-type p::first-letter {
   /* JOUW CODE HIER */
-
+font-family:'Expletus Sans Bold';
   
 }
 
@@ -46,37 +50,44 @@ li:first-of-type p::first-letter {
 /* CODE VOOR HET TWEEDE BLOKJE */
 /*******************************/
 
-/* JOUW @FONT-FACE CODE HIER */
 @font-face {
-  
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.ttf');
+  font-weight: 100;
+  font-style: normal;
 }
 
-
-/* hiermee selecteer je het tweede blokje */
+/* tweede blokje */
 li:nth-of-type(2) {
-  /* custom properties voor tweede blokje */
-  --color:hsl(0 0% 100%);
-  --background:rgb(0 24 54);
-  --shadow:Cyan;
-  
-  /* met onderstaande regels staat de tekst in het midden */
-  /* en elk woord op een nieuwe regel */
-  display:grid;
-  grid-auto-columns:min-content;  
-  place-content:center;
-  text-align:center;
-  
-  background-color:var(--background);
+  --color: hsl(0 0% 100%);
+  --background: rgb(0, 24, 54);
+  --shadow: cyan;
+
+  display: grid;
+  grid-auto-columns: min-content;
+  place-content: center;
+  text-align: center;
+  background-color: var(--background);
 }
 
 li:nth-of-type(2) h2 {
-  margin:0;
-  color:var(--color);
-
-  /* JOUW CODE HIER */
-
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: cyan;
   
+  /* mooie glow */
+  text-shadow:
+    0 0 5px cyan,
+    0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 80px cyan;
 }
+
 
 
 
@@ -88,6 +99,11 @@ li:nth-of-type(2) h2 {
 
 /* JOUW @FONT-FACE CODE HIER */
 @font-face {
+  font-family: 'Saira-Condensed';
+  src: url('../fonts/Saira_Condensed-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
   
 }
 
@@ -98,12 +114,19 @@ li:nth-of-type(3) {
   --shadow:rgb(0 0 0 / .75);
 
   /* JOUW CODE HIER */
-  
+   background-color:var(--background);
 
 }
-
 li:nth-of-type(3) h2 {
-  /* JOUW CODE HIER */
+  margin: 0;
+  transform: rotate(-10deg);
+  display: inline-block;
 
-  
+  font-family: 'Saira-Condensed';
+  font-size: 3.5em;
+  line-height: 1em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color);
+  text-shadow: .1em .1em 0 var(--shadow);
 }

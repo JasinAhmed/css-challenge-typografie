@@ -1,7 +1,30 @@
 /*******************************/
 /* CODE VOOR HET EERSTE BLOKJE */
 /*******************************/
+@font-face {
+  font-family: 'black han';
+  src: url('../fonts/BlackHan.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+li:nth-of-type(1) {
+  --color:hsl(0 0% 60%);
+  --gradient:linear-gradient(45deg, navy, dodgerblue, deeppink, indigo);
+  --background:var(--color);
+  --shadow:hsl(0 0% 0% / .5);
+  
+  display:grid;
+  place-content:center;
+  
+  background-color:var(--background);
+}
 
+li:nth-of-type(1) h2 {
+  font-family:'black han', sans-serif; 
+  font-size:4em;
+  line-height:1em;
+}
 
 
 
